@@ -1,0 +1,840 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kzsqu/web1/blob/main/1%ED%95%99%EA%B8%B0_%EC%A0%95%EB%A6%AC_1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#**1. 기초**"
+      ],
+      "metadata": {
+        "id": "-aartR7N9V3V"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**출력: print()**"
+      ],
+      "metadata": {
+        "id": "2F4KT0Y6jAJJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1. 하나의 값을 출력\n",
+        "print(\"Hello World!\")"
+      ],
+      "metadata": {
+        "id": "x0zkdSlVj9pY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a0fa3b0f-270a-4278-e555-d09fb8402df0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2. 2개 이상의 값을 출력\n",
+        "print(2023 , 3 , 1 , \"삼일절\")"
+      ],
+      "metadata": {
+        "id": "SywoMQ8fCJa9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "29c04c29-ce7d-47d2-fdd5-7d352e06badd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2023 3 1 삼일절\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#줄바꿈하기\n",
+        "print(\"Hello\")\n",
+        "print() #빈 줄을 출력한다.\n",
+        "print()\n",
+        "print(\"world!\")"
+      ],
+      "metadata": {
+        "id": "qk4VGTy4kd4T",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c8e8fe42-0238-4715-becb-6eb2aab3da13"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello\n",
+            "\n",
+            "\n",
+            "world!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(5)\n",
+        "print(4)\n",
+        "print(3)\n",
+        "print(2)\n",
+        "print(1)\n",
+        "print(0)"
+      ],
+      "metadata": {
+        "id": "pe_WN_0jFhty",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9f8da113-9ece-4fcc-a902-69f9cbb8a509"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**이스케이프 문자(escape character)**\n",
+        "특수한 기능을 수행하기 하거나 특수 문자를 사용하기 위해서 사용하는 문자이다.<br>백슬래시( \\\\ )와 함께 사용한다. ( 크롬북에서는 ₩ 표시 )\n",
+        "</font>"
+      ],
+      "metadata": {
+        "id": "ZAk_PCp41O1V"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#줄바꿈\n",
+        "print(\"hello \\n World\")\n",
+        "print()\n",
+        "\n",
+        "#탭\n",
+        "print(\"hello \\t world\")\n",
+        "print()\n",
+        "\n",
+        "#백스페이스\n",
+        "print(\"hello\\bworld\")\n",
+        "print()\n",
+        "\n",
+        "# \" 출력\n",
+        "print(\"철수가 말했다. \\\"안녕\\\"\")\n",
+        "print()\n",
+        "\n",
+        "# ' 출력\n",
+        "print(\"\\'helloworld\\'\")\n",
+        "print()\n",
+        "\n",
+        "# \\ 출력\n",
+        "print(\"hello\\\\world\")\n",
+        "print()"
+      ],
+      "metadata": {
+        "id": "jdQZ9Waz1X1o"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**기초 자료형(Primitive type)**\n",
+        "<font size=4>문자열(String), 정수(int), 실수(float)</font>"
+      ],
+      "metadata": {
+        "id": "cYMVtjURoSwi"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####**문자열(String)**"
+      ],
+      "metadata": {
+        "id": "J5bNXd1JyRLI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Hello World\")"
+      ],
+      "metadata": {
+        "id": "TmuPs98l0pWN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####**정수(integer)**\n",
+        "<font size=4>0, 1, 273, -52\n",
+        "</font>"
+      ],
+      "metadata": {
+        "id": "WIdJ7JxiVY31"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(100)"
+      ],
+      "metadata": {
+        "id": "AhW5apxqVYlp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####**실수(real number)**\n",
+        "<font size=4>\n",
+        "0.0, 52.33, 3.14, 0.75, -1.7\n",
+        "</font>"
+      ],
+      "metadata": {
+        "id": "lwRry4ABqevV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(3.14)"
+      ],
+      "metadata": {
+        "id": "Rh3WXEEoqevV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**연산(operation)**\n",
+        "<font size=5>\n",
+        "\n",
+        "```python\n",
+        "+ - * /\n",
+        "** // %\n",
+        "```\n",
+        "\n",
+        "</font>"
+      ],
+      "metadata": {
+        "id": "q7aIksQgqyrJ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####**숫자(number)**"
+      ],
+      "metadata": {
+        "id": "__rJnXoKtie-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(7+2)\n",
+        "print(7-2)\n",
+        "print(7*2)\n",
+        "print(7/2)\n",
+        "print(7**2)\n",
+        "print(7//2)\n",
+        "print(7%2)"
+      ],
+      "metadata": {
+        "id": "YGcC3XadsFtw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(7.3+2)\n",
+        "print(7.3-2)\n",
+        "print(7.3*2)\n",
+        "print(7.3/2)\n",
+        "print(7.3**2)\n",
+        "print(7.3//2)\n",
+        "print(7.3%2)"
+      ],
+      "metadata": {
+        "id": "9NpSPDtzslaN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####**문자(string)**"
+      ],
+      "metadata": {
+        "id": "WUsWkd7TtnZw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"abc\" + \"def\")\n",
+        "print(\"abc\" * 3)"
+      ],
+      "metadata": {
+        "id": "edQUTqoTs-kb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8b693491-6d46-49e8-9588-08a811484f0b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "abcdef\n",
+            "abcabcabc\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**변수(Variable)**\n",
+        "<font size=4>변수 선언(Declaration), 할당(Assignment)</font>"
+      ],
+      "metadata": {
+        "id": "FHC9Nb6btyc1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 변수 선언, 할당\n",
+        "pi = 3.14\n",
+        "# 변수 출력\n",
+        "print(pi)"
+      ],
+      "metadata": {
+        "id": "O23d4-E0t64T"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#원의 둘레와 넓이 구하기\n",
+        "pi = 3.14\n",
+        "r = 10\n",
+        "\n",
+        "print(\"원주률 =\", pi)\n",
+        "print(\"반지름 =\", r)\n",
+        "print(\"원의 둘레 =\", 2*pi*r)\n",
+        "print(\"원의 넓이 =\", pi*r**2)"
+      ],
+      "metadata": {
+        "id": "LWjsqb6guTQm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2개 이상 변수 한번에 선언, 할당\n",
+        "a, b, c = \"韓\", 20, 30\n",
+        "print(a,b,c)"
+      ],
+      "metadata": {
+        "id": "FPbuXQMeuZFq",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c89e19b5-96e0-4271-99f7-9d15552b91b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "韓 20 30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**사용자 입력(input)**\n",
+        "<font size=4>input으로 받은 데이터의 자료형은 string</font>"
+      ],
+      "metadata": {
+        "id": "cELlqnbW4x0Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#기본\n",
+        "input()"
+      ],
+      "metadata": {
+        "id": "C-wbLv4A480t"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#입력 안내 문구 사용\n",
+        "input(\"날짜 입력 >>> \")"
+      ],
+      "metadata": {
+        "id": "GcNGbLPb8YvF",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 52
+        },
+        "outputId": "5b810803-41e9-4104-8fee-c4742428553a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "날짜 입력 >>> 2023.8.13\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'2023.8.13'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#입력 받은 값을 변수에 할당\n",
+        "input_word = input(\"입력>>>\")\n",
+        "print(input_word * 3)"
+      ],
+      "metadata": {
+        "id": "hkFSSZfQu-yR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "94d02032-1598-4b17-eb4f-f0a791a2253b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "입력>>>100\n",
+            "100100100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**형변환(Type Conversions)**\n",
+        "<font size=4>데이터의 Type를 변환<br>int(), float(), str()</font>"
+      ],
+      "metadata": {
+        "id": "pTup8-dv-XP2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#정수: int()\n",
+        "number = int(input(\"정수 입력>>>\"))\n",
+        "print(number * 2)"
+      ],
+      "metadata": {
+        "id": "eskdJu0H-4aq",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e6fc0f77-4b40-4845-bb32-1e5c8a4e4caa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "정수 입력>>>100\n",
+            "200\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#실수: float()\n",
+        "height = float(input(\"키 입력>>>\"))\n",
+        "print(height * 1.618)"
+      ],
+      "metadata": {
+        "id": "3r1RcJWtw2rs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#문자: str()\n",
+        "age = str(16)\n",
+        "print(\"나의 나이는 \" + age +\"살\")"
+      ],
+      "metadata": {
+        "id": "kWYrZidryfJa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fe3a747f-1cd2-4c59-b0c9-b042509af85c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "나의 나이는 16살\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**문자열 나누기(split) 자르기**\n",
+        "리턴: 리스트"
+      ],
+      "metadata": {
+        "id": "F5bl1omX5t4f"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#공백을 기준으로 나누기\n",
+        "x,y = \"Hello world\".split()\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "id": "R97bVKMy574C",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "59028c97-4377-477d-ea87-ea211847e23e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4 특정 기호를 기준으로 나누기\n",
+        "a,b,c = \"One,Two,Three\".split(\",\")\n",
+        "print(a,b,c)"
+      ],
+      "metadata": {
+        "id": "YzoxIQM_zbJW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9a6d1d6c-6d5d-494c-e8d6-78c362345935"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "One Two Three\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#input(), split() 같이 사용\n",
+        "a,b = input(\"숫자 2개를 입력하세요>>>\").split()\n",
+        "print(int(a)+int(b))"
+      ],
+      "metadata": {
+        "id": "B0BoP9aX1Ozd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**문자열 형식화(string formatting)**\n",
+        "<font size=4>format(), f-string</font>"
+      ],
+      "metadata": {
+        "id": "ejkGyfxpYiZs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#format()\n",
+        "print(\"{}\".format(10))\n",
+        "print(\"{} {}\".format(10,20))\n",
+        "print(\"{} {} {}\".format(10, 20, 30))\n",
+        "print(\"{2} {1} {0}\".format(10, 20, 30))"
+      ],
+      "metadata": {
+        "id": "Xyuaei5O3jfO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#f-string\n",
+        "#문자열 앞에 f를 붙임!\n",
+        "x = 10\n",
+        "print(f\"{x}\")\n",
+        "print(f\"{10} {20}\")\n",
+        "print(f\"{10} {20} {30}\")\n",
+        "print(f\"{30} {20} {10}\")"
+      ],
+      "metadata": {
+        "id": "ALWZK0FV4GQW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**Boolean(Bool, 불리언)**\n",
+        "<font size=4>참(True)과 거짓(False)를 나타는내는 자료형</font>"
+      ],
+      "metadata": {
+        "id": "j7QGfECK5Vuo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = True\n",
+        "b = False"
+      ],
+      "metadata": {
+        "id": "Z4wtfInrwRS2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**비교 연산자(Comparison Operator)**\n",
+        "<font size=4>==, !=, >, <, >= , <= </font>"
+      ],
+      "metadata": {
+        "id": "xNrl4BMH3rSN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#같다.\n",
+        "print(3 == 2)\n",
+        "print(3 != 2)\n",
+        "print(3 > 2)\n",
+        "print(3 < 2)\n",
+        "print(3 >= 2)\n",
+        "print(3 <= 2)"
+      ],
+      "metadata": {
+        "id": "W_U6HWf4yKMw",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "44f6ae06-d26b-4dae-8a55-fe91449b6cac"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**논리 연산자(Logic Operator)**\n",
+        "<font size=4>and, or, not</font>"
+      ],
+      "metadata": {
+        "id": "D3UOCTYy512W"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#and\n",
+        "print(True and True)\n",
+        "print(True and False)\n",
+        "print(False and True)\n",
+        "print(False and False)\n",
+        "print()\n",
+        "\n",
+        "#or\n",
+        "print(True or True)\n",
+        "print(True or False)\n",
+        "print(False or True)\n",
+        "print(False or False)\n",
+        "print()\n",
+        "\n",
+        "#or\n",
+        "print(not True)\n",
+        "print(not False)\n",
+        "print()"
+      ],
+      "metadata": {
+        "id": "ujFS6_bG6S1W"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###**비교 연산자(Comparison Operator) + 논리 연산자(Logic Operator)**"
+      ],
+      "metadata": {
+        "id": "nWlAaT6f7ktc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"입력>>>\"))\n",
+        "\n",
+        "print(x > 0 and x <= 100 )\n",
+        "0 < x <= 100"
+      ],
+      "metadata": {
+        "id": "9Rxu3_G77p5Z"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
