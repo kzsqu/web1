@@ -1,0 +1,444 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kzsqu/web1/blob/main/coding_test00\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. 피자주문"
+      ],
+      "metadata": {
+        "id": "2VjEv-7P3RCI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "kpq4vBk-3Apv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a662f1a3-f678-4765-9a7c-fc08b42fc914"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8 16\n",
+            "2\n"
+          ]
+        }
+      ],
+      "source": [
+        "s,n = map(int,input().split())\n",
+        "\n",
+        "if n%s >0:\n",
+        "    print(n//s+1)\n",
+        "elif n%s == 0:\n",
+        "    print(n//s)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. 팀짜기"
+      ],
+      "metadata": {
+        "id": "MqYswVkS3jOX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "names = [\"루피\",\"나미\",\"조로\",\"상디\",\"우솝\",\"로빈\",\"로저\",\"드래곤\"]\n",
+        "name_list = []\n",
+        "\n",
+        "for i in range(0,len(names),3):\n",
+        "    name_list.append(names[i])\n",
+        "print(name_list)\n",
+        "\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "id": "LaiwYLfg3kOV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b1c92c40-37b6-4f3b-8835-b31fba9765c3"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['루피', '상디', '로저']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. 홀,짝 크기 비교"
+      ],
+      "metadata": {
+        "id": "MunWyRBb3jUB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_list = [4,2,6,1,7,6]\n",
+        "even_list = []\n",
+        "odd_list = []\n",
+        "\n",
+        "for i in range(0,len(num_list)):\n",
+        "    if i%2 == 0:\n",
+        "        even_list.append(num_list[i])\n",
+        "    else:\n",
+        "        odd_list.append(num_list[i])\n",
+        "\n",
+        "if sum(even_list) > sum(odd_list):\n",
+        "    print(sum(even_list))\n",
+        "else:\n",
+        "    print(sum(odd_list))\n"
+      ],
+      "metadata": {
+        "id": "kapiyUV63xPl",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e31a7e1e-d653-46d2-c1b9-e3b540068acc"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "17\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. 가까운 수"
+      ],
+      "metadata": {
+        "id": "ztGjKebf35sx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "int_list = [3,10,28]\n",
+        "\n",
+        "n = int(input())\n",
+        "a_list = []\n",
+        "for i in int_list:\n",
+        "    a_list.append(abs(n-i))\n",
+        "    a_list.sort()\n",
+        "\n",
+        "print(i)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "r2ViByK7358w",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1d371d34-675a-4936-ebde-60c0d5f9cc79"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20 \n",
+            "28\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. 작은 수 제거하기"
+      ],
+      "metadata": {
+        "id": "YkI-2ml-4HGY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "arr = [3]\n",
+        "\n",
+        "if len(arr) > 1:\n",
+        "    arr.sort()\n",
+        "    del arr[0]\n",
+        "    print(arr)\n",
+        "\n",
+        "else:\n",
+        "    arr[0] = -1\n",
+        "    print(arr)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "r6p0J45m4Hbo",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "161f2003-e4d1-4f32-f430-c2b4ab402997"
+      },
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[-1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. 1로 만들기"
+      ],
+      "metadata": {
+        "id": "notF8pp14Mvx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = int(input())\n",
+        "cnt = 0\n",
+        "\n",
+        "while a != 1:\n",
+        "    cnt += 1\n",
+        "    if a%2 == 0:\n",
+        "        a = a / 2\n",
+        "    else:\n",
+        "        a = (a - 1) / 2\n",
+        "\n",
+        "print(cnt)"
+      ],
+      "metadata": {
+        "id": "0dO83Jlu4Me8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0301e3bb-fb7e-4353-8c1a-e6ecfb511c40"
+      },
+      "execution_count": 82,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "12\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. 할인 받기"
+      ],
+      "metadata": {
+        "id": "xkDQuwTk4SYQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "price = int(input())\n",
+        "\n",
+        "if 300000 > price >= 100000:\n",
+        "    print(price*0.95)\n",
+        "elif 300000 <= price < 500000:\n",
+        "    print(price*0.9)\n",
+        "else:\n",
+        "    print(price*0.8)"
+      ],
+      "metadata": {
+        "id": "jyPnT-HP4SsG",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8ac62948-c6fe-4414-aa75-17f59e124929"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "580000\n",
+            "464000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. 나 보다 키 큰 사람"
+      ],
+      "metadata": {
+        "id": "hTYCyECL4V3n"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "array = [149,180,192,170]\n",
+        "\n",
+        "h_list = []\n",
+        "\n",
+        "h = int(input())\n",
+        "\n",
+        "for i in array:\n",
+        "    if (int(i)-h) >= 0:\n",
+        "        h_list.append(i)\n",
+        "print(len(h_list))"
+      ],
+      "metadata": {
+        "id": "34cd-FlK4WGR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5bf4c9ff-edf8-45a8-e721-367ac9d7d688"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "167\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9. 점의 위치 구하기"
+      ],
+      "metadata": {
+        "id": "XQw84UJs4bcP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dot = [2,4]\n",
+        "\n",
+        "if dot[0] >0 and dot[1] >0:\n",
+        "    print(\"1\")\n",
+        "elif dot[0] < 0 and dot[1] >0:\n",
+        "    print(\"2\")\n",
+        "elif dot[0] < 0 and dot[1] < 0:\n",
+        "    print(\"3\")\n",
+        "else:\n",
+        "    print(\"4\")"
+      ],
+      "metadata": {
+        "id": "TODbDdox4b2I",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "87fb311f-bd03-4b56-8cc8-119ab22c84cd"
+      },
+      "execution_count": 58,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10. 서비스"
+      ],
+      "metadata": {
+        "id": "UtEJRlQQ4lYs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n,k = map(int,input().split())\n",
+        "\n",
+        "if n <10 and k >0:\n",
+        "    print((n*12000)+(k*2000))\n",
+        "elif n <10 and k == 0:\n",
+        "    print((n*12000))\n",
+        "elif n >=10 and k == 0:\n",
+        "    print(n*12000)\n",
+        "elif n >= 10 and k>0:\n",
+        "    print(n*12000 + 2000*k - (2000*(n//10)))"
+      ],
+      "metadata": {
+        "id": "GkCXnO_94lnH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ffc01813-b93c-40af-b93f-cfd73984aba6"
+      },
+      "execution_count": 76,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "64 7\n",
+            "770000\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
